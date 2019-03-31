@@ -82,12 +82,14 @@ namespace MemoryLeak
                         break;
 
                     case "g":
+                        #region instructions
                         /*
                          * Take snapshot.
                          * Enter "g". 
                          * Take snapshot.
                          * Observe how all IUseEvent objects are gone.
                          * */
+                        #endregion
                         IHaveEvents ihe2 = new IHaveEvents();
                         EventPileUp(ihe2);
                         ihe2.RemoveAllRazedEvents();

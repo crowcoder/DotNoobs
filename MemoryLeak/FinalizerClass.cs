@@ -4,7 +4,6 @@ namespace MemoryLeak
 {
     class FinalizerClass : IDisposable
     {
-
         // Flag: Has Dispose already been called?
         bool disposed = false;
 
