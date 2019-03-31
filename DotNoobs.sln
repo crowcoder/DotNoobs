@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitOrder", "InitOrder\Init
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathToSuccess", "PathToSuccess\PathToSuccess.csproj", "{A0B65029-EDC7-426A-ABFD-47192893E5C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloner", "Cloner\Cloner.csproj", "{24DD3FEF-A92A-4321-B5F7-EBC31BBD8E10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A0B65029-EDC7-426A-ABFD-47192893E5C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0B65029-EDC7-426A-ABFD-47192893E5C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0B65029-EDC7-426A-ABFD-47192893E5C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24DD3FEF-A92A-4321-B5F7-EBC31BBD8E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24DD3FEF-A92A-4321-B5F7-EBC31BBD8E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24DD3FEF-A92A-4321-B5F7-EBC31BBD8E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24DD3FEF-A92A-4321-B5F7-EBC31BBD8E10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
