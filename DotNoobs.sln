@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpOverload", "CSharpOve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linqing", "Linqing\Linqing.csproj", "{08D14A46-FD10-4B59-BCED-241B36F377D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingConnected", "GettingConnected\GettingConnected.csproj", "{9DD24890-C68F-42F1-99AF-CC8C62F67BDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{08D14A46-FD10-4B59-BCED-241B36F377D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08D14A46-FD10-4B59-BCED-241B36F377D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08D14A46-FD10-4B59-BCED-241B36F377D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DD24890-C68F-42F1-99AF-CC8C62F67BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DD24890-C68F-42F1-99AF-CC8C62F67BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DD24890-C68F-42F1-99AF-CC8C62F67BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DD24890-C68F-42F1-99AF-CC8C62F67BDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
