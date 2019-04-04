@@ -36,7 +36,7 @@ namespace GuidDemo
             for (int j = 0; j < 5; j++)
             {
                 sw.Start();
-                for (int i = 0; i < 10000; i++)
+                for (int i = 0; i < 1000; i++)
                 {
                     Guid g = Guid.NewGuid();
 
@@ -53,21 +53,25 @@ namespace GuidDemo
 
                 Console.WriteLine($"The DotNet Guid operations took {sw.ElapsedMilliseconds / 1000} seconds.");
 
-                InsCmd.Parameters.Clear();
-                InsCmd.CommandText = "INSERT INTO [GuidKeyTable](Id, Description) OUTPUT inserted.Id VALUES(NEWID(), N'Blah, blah, blah');";
+               // InsCmd.Parameters.Clear();
+                //InsCmd.CommandText = "INSERT INTO [GuidKeyTable](Id, Description) OUTPUT inserted.Id VALUES(NEWID(), N'Blah, blah, blah');";
+                InsCmd.CommandText = "INSERT INTO [GuidKeyTable](Id, Description) VALUES(@Id, N'Blah, blah, blah');";
                 UpdCmd.CommandText = "UPDATE [GuidKeyTable] SET [Description] = 'Changed...' WHERE Id = @Id;";
                 DelCmd.CommandText = "DELETE FROM [GuidKeyTable] WHERE [Id] = @Id;";
 
                 sw.Reset();
                 sw.Start();
-                for (int i = 0; i < 10000; i++)
+                for (int i = 0; i < 1000; i++)
                 {
-                    Guid sqlGuid = (Guid)InsCmd.ExecuteScalar();
+                    Guid cg = RT.Comb.Provider.Sql.Create();
+                    //Guid sqlGuid = (Guid)InsCmd.ExecuteScalar();
+                    p_InsCmddotNetId.Value = cg;
+                    InsCmd.ExecuteNonQuery();
 
-                    p_UpdCmddotNet.Value = sqlGuid;
+                    p_UpdCmddotNet.Value = cg; // sqlGuid;
                     UpdCmd.ExecuteNonQuery();
 
-                    p_DelCmddotNet.Value = sqlGuid;
+                    p_DelCmddotNet.Value = cg;
                     DelCmd.ExecuteNonQuery();
                 }
                 sw.Stop();
