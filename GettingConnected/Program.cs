@@ -22,7 +22,7 @@ namespace GettingConnected
             {
                 switch (input)
                 {
-                    case "p" :
+                    case "p":
                         ClearThePool();
                         break;
                     default:
@@ -30,15 +30,15 @@ namespace GettingConnected
                         input = Console.ReadLine();
                         break;
                 }
-                
+
 
             } while (input != "x");
 
         }
-
+        
         static void DoQuery(string cnxnString)
         {
-            SqlConnection cnxn = new SqlConnection(cnxnString);            
+            SqlConnection cnxn = new SqlConnection(cnxnString);
             SqlCommand cmd = cnxn.CreateCommand();
 
             cnxn.Open();
