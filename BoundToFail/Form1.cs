@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace BoundToFail
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private DataTable Fetch()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ID", typeof(int));
+            dt.Columns.Add("ProductName", typeof(string));
+            dt.Columns.Add("ReleaseDate", typeof(DateTime));
+            dt.Columns.Add("InStock", typeof(bool));
+            dt.Columns.Add("UnitCost", typeof(decimal));
+
+            return dt;
+        }
+    }
+}
