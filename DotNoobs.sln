@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoundToFail", "BoundToFail\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowMeTheMoney", "ShowMeTheMoney\ShowMeTheMoney.csproj", "{056CF819-442B-41B3-BEBA-F54247944F16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpCrudGrid", "CRUD\CSharpCrudGrid.csproj", "{713DCAAB-362C-4EC4-9DEE-0E9A8981B67A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{056CF819-442B-41B3-BEBA-F54247944F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{056CF819-442B-41B3-BEBA-F54247944F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{056CF819-442B-41B3-BEBA-F54247944F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{713DCAAB-362C-4EC4-9DEE-0E9A8981B67A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713DCAAB-362C-4EC4-9DEE-0E9A8981B67A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713DCAAB-362C-4EC4-9DEE-0E9A8981B67A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713DCAAB-362C-4EC4-9DEE-0E9A8981B67A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

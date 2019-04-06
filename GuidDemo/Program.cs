@@ -4,6 +4,10 @@ using System.Diagnostics;
 
 namespace GuidDemo
 {
+
+    //[DllImport("rpcrt4.dll", SetLastError=true)]
+    //static extern int UuidCreateSequential(out Guid guid);
+
     class Program
     {
         static void Main(string[] args)
