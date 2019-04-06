@@ -11,7 +11,7 @@ namespace Linqing
     public class FruitContext : DbContext
     {
         public FruitContext()
-            : base("Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=Fruit; Integrated Security = True")
+            : base("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Fruit;Integrated Security=True;Application Name=Linqing;")
         {
 
         }

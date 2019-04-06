@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Linqing
 {
@@ -10,20 +7,36 @@ namespace Linqing
     {
         static void Main(string[] args)
         {
-            try
+            string input = Console.ReadLine();
+
+            do
             {
-                using (var fruitCtx = new FruitContext())
+                switch (input)
                 {
-                    var firstFruit = fruitCtx.Fruits.First();
-                    Console.WriteLine(firstFruit.FruitName);
+                    case "a":
+                        DeferredQry();
+                        break;
+                    default:
+                        Console.WriteLine("No selection");
+                        break;
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
+
+                input = Console.ReadLine();
+
+            } while (input != "x");
 
             Console.ReadKey();
+        }
+
+        static void DeferredQry()
+        {
+            using (var fruitCtx = new FruitContext())
+            {
+                var AFruits = fruitCtx.Fruits.Where(f => f.FruitName.StartsWith("A"));
+
+                Console.WriteLine(AFruits.ToList());
+
+            }
         }
     }
 }
