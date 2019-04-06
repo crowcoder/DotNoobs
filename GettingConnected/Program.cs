@@ -31,9 +31,7 @@ namespace GettingConnected
                         break;
                 }
 
-
             } while (input != "x");
-
         }
         
         static void DoQuery(string cnxnString)

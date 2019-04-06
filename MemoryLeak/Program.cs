@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -92,6 +93,7 @@ namespace MemoryLeak
                         #endregion
                         IHaveEvents ihe2 = new IHaveEvents();
                         EventPileUp(ihe2);
+                        Debugger.Break();
                         ihe2.RemoveAllRazedEvents();
                         Console.WriteLine("Done");
                         break;
@@ -146,7 +148,6 @@ namespace MemoryLeak
             {
                 FinalizerClass fc = new FinalizerClass();
             }
-
         }
 
         //e
