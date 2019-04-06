@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Linqing
 {
@@ -24,5 +19,10 @@ namespace Linqing
         public int FruitID { get; set; }
         public string FruitName { get; set; }
         public bool? FruitIsYummy { get; set; }
+
+        public override string ToString()
+        {
+            return $"FruitID: {FruitID}, FruitName: {FruitName}, FruitIsYummy: {FruitIsYummy}";
+        }
     }
 }
