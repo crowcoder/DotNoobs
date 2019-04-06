@@ -158,6 +158,7 @@ namespace CSharpCrudGrid
         private void btnSave_Click(object sender, EventArgs e)
         {
             _adapter.Update(_fruitTable);
+            MessageBox.Show("Done");
         }
 
         /// <summary>
@@ -225,9 +226,7 @@ namespace CSharpCrudGrid
                 }
 
                 //delete?
-
-            
-
+                
             }
 
             MessageBox.Show("Done");
