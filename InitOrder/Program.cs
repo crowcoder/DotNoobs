@@ -12,10 +12,10 @@ namespace InitOrder
         static void Main(string[] args)
         {
 
-            Example example = new Example();
+            //Example example = new Example();
 
-            //Mistake mistake = new Mistake();
-            //Console.WriteLine(mistake.AProperty);
+            Mistake mistake = new Mistake();
+            Console.WriteLine(mistake.AProperty);
 
             Console.ReadKey();
         }
@@ -52,11 +52,13 @@ namespace InitOrder
     {
         public static MyClass MyClassProperty { get; set; }
 
-        public string AProperty { get; set; } = GetAString();
+        //Boom! MyClassProperty is not instantiated until the constructor
+        //runs so the initialization of AProperty blows up.
+        public string AProperty { get; set; } = MyClassProperty.ToString();
         
         public Mistake()
         {
-            MyClassProperty = new MyClass();
+            MyClass myClass = new MyClass(); 
         }
 
         public static string GetAString()

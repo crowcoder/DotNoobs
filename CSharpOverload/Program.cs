@@ -20,10 +20,10 @@ namespace CSharpOverload
         class Foo
         {
             //A
-            //internal void DoSomething(double nbr, string str)
-            //{
-            //    Console.WriteLine("Called A");
-            //}
+            internal void DoSomething(double nbr, string str)
+            {
+                Console.WriteLine("Called A");
+            }
 
             //B
             public void DoSomething(float nbr, string str, string str2 = "optional")
@@ -32,10 +32,10 @@ namespace CSharpOverload
             }
 
             //C
-            //public void DoSomething(int nbr, string str)
-            //{
-            //    Console.WriteLine("Called C");
-            //}
+            public void DoSomething(int nbr, object str)
+            {
+                Console.WriteLine("Called C");
+            }
 
             //D
             //internal void DoSomething(decimal nbr, string str)
@@ -44,10 +44,10 @@ namespace CSharpOverload
             //}
 
             //E
-            internal void DoSomething(decimal nbr, string str, byte b = 3)
-            {
-                Console.WriteLine("Called E");
-            }
+            //internal void DoSomething(decimal nbr, string str, byte b = 3)
+            //{
+            //    Console.WriteLine("Called E");
+            //}
         }
     }
 }

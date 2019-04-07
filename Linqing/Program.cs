@@ -89,10 +89,18 @@ namespace Linqing
             numbers.Add(1);
 
             IEnumerable<int> query = numbers.Select(n => n * 10);    // Build query
+            foreach (var item in query)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("sneak in extra element");
 
             numbers.Add(2);  // Sneak in an extra element
-
-            Console.WriteLine("Notice both elements are returned in the result set");
+            foreach (var item in query)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         //e
@@ -102,11 +110,19 @@ namespace Linqing
 
             IEnumerable<int> query = numbers.Select(n => n * 10);
 
-            Console.WriteLine("Both elements are returned");
+            foreach (var item in query)
+            {
+                Console.WriteLine(item);
+            }
+
+            Debugger.Break();
 
             numbers.Clear();
 
-            Console.Write("All the elements are now gone!");
+            foreach (var item in query)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
